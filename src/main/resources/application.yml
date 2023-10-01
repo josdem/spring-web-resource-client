@@ -10,11 +10,11 @@ spring:
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
             scope: openid
-            client-name: articles-client-oidc
+            client-name: categories-client-oidc
           articles-client-authorization-code:
             provider: spring
-            client-id: categories-client
-            client-secret: secret
+            client-id: login-client
+            client-secret: openid-connect
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/authorized"
             scope: categories.read
