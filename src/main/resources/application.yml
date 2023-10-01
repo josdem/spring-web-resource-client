@@ -5,20 +5,20 @@ spring:
         registration:
           articles-client-oidc:
             provider: spring
-            client-id: login-client
-            client-secret: openid-connect
+            client-id: articles-client
+            client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
             scope: openid
-            client-name: categories-client-oidc
+            client-name: articles-client-oidc
           articles-client-authorization-code:
             provider: spring
-            client-id: login-client
-            client-secret: openid-connect
+            client-id: articles-client
+            client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "http://127.0.0.1:8080/authorized"
-            scope: categories.read
-            client-name: categories-client-authorization-code
+            scope: articles.read
+            client-name: articles-client-authorization-code
         provider:
           spring:
             issuer-uri: http://auth-server:9000
