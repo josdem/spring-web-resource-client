@@ -17,13 +17,13 @@ public class CategoriesController {
 
   private final WebClient webClient;
 
-  @GetMapping("/articles")
+  @GetMapping("/categories")
   public List<String> getCategories(
-      @RegisteredOAuth2AuthorizedClient("articles-client-authorization-code")
+      @RegisteredOAuth2AuthorizedClient("categories-client-authorization-code")
           OAuth2AuthorizedClient authorizedClient) {
     return this.webClient
         .get()
-        .uri("http://127.0.0.1:8090/articles")
+        .uri("http://127.0.0.1:8081/categories")
         .attributes(oauth2AuthorizedClient(authorizedClient))
         .retrieve()
         .bodyToMono(List.class)
