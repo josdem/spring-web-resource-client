@@ -21,4 +21,4 @@ spring:
             client-name: categories-client-authorization-code
         provider:
           spring:
-            issuer-uri: http://auth-server:9000
+            issuer-uri: https://auth.josdem.io/
